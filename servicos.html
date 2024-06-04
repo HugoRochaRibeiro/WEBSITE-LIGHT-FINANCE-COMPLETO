@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Serviços | Website Light Finance</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- header on-->
+    <header style="background-image: url('img/background-servicos.jpg')">
+        <!-- conteiner on-->
+        <div class="conteiner">
+            <nav>
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a class="btn animate-btn" href="servicos.html">DashBoard</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <i class="fa fa-times-circle"></i>
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1>DashBoard</h1>
+                </div>
+            </section>
+        </div>
+        <!-- conteiner off-->
+    </header>
+    <!-- header off-->
+    <!-- servicos ON-->
+    <section class="servicos">
+        <div class="conteiner">
+            <h3>Área do cliente</h3>
+            <p>Aqui é onde te ajudaremos a deixar tudo mais leve!</p>
+            <p>Te apresentaremos um versão piloto do nosso sistema, onde você poderá calcular o seu saldo mensal mês a mês e vizualizar seu saldo atual (final do mês três). É só adicionar as informações referente ao mês 1, 2 ou 3, e a magica acontece!</p>
+        </div>
+        <!--aqui todo o trambite de graficos e calcular e afins ON-->
+
+
+        <div class="div-formularios" id="month-forms-conteiner">
+            <!-- Formulários para cada mês -->
+            <div class="month-form" data-month="1">
+                <h2>Mês 1</h2>
+                <form>
+                    <input type="text" class="description income" placeholder="Descrição Receita" required>
+                    <input type="number" class="amount income" placeholder="Valor Receita" required>
+                    <input type="number" class="estimated-income" placeholder="Meta Receita" required>
+                    <input type="text" class="description expense" placeholder="Descrição Despesa" required>
+                    <input type="number" class="amount expense" placeholder="Valor Despesa" required>
+                    <input type="number" class="estimated-expense" placeholder="Meta Despesa" required>
+                </form>
+            </div>
+            <div class="month-form" data-month="2">
+                <h2>Mês 2</h2>
+                <form>
+                    <input type="text" class="description income" placeholder="Descrição Receita" required>
+                    <input type="number" class="amount income" placeholder="Valor Receita" required>
+                    <input type="number" class="estimated-income" placeholder="Meta Receita" required>
+                    <input type="text" class="description expense" placeholder="Descrição Despesa" required>
+                    <input type="number" class="amount expense" placeholder="Valor Despesa" required>
+                    <input type="number" class="estimated-expense" placeholder="Meta Despesa" required>
+                </form>
+            </div>
+            <div class="month-form" data-month="3">
+                <h2>Mês 3</h2>
+                <form>
+                    <input type="text" class="description income" placeholder="Descrição Receita" required>
+                    <input type="number" class="amount income" placeholder="Valor Receita" required>
+                    <input type="number" class="estimated-income" placeholder="Meta Receita" required>
+                    <input type="text" class="description expense" placeholder="Descrição Despesa" required>
+                    <input type="number" class="amount expense" placeholder="Valor Despesa" required>
+                    <input type="number" class="estimated-expense" placeholder="Meta Despesa" required>
+                </form>
+            </div>
+            <button class="btn-formulario" id="generate-graphs">Gerar Gráficos</button>
+        </div>
+        <div class="charts-conteiner">
+            <canvas id="revenue-chart"></canvas>
+            <canvas id="expense-chart"></canvas>
+            <canvas id="balance-chart"></canvas>
+        </div>
+        <div class="current-balance-conteiner">
+            <h2>Saldo Atual: <span id="current-balance">R$ 0,00</span></h2>
+        </div>
+
+
+        <!--aqui todo o trambite de graficos e calcular e afins OFF-->
+    </section>
+    <!-- servicos OFF-->
+    <!-- Footer ON-->
+    <footer class="footer">
+        <div class="conteiner">
+            <div class="links">
+                <a href="https://www.instagram.com/hug_rr/"> <i class="fa fa-instagram"></i></a>
+                <a href="https://github.com/HugoRochaRibeiro"> <i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hugo-rocha-ba2323270/"> <i class="fa fa-linkedin"></i></a>
+            </div>
+            <p>Desenvolvido por Hugo Rocha</p>
+        </div>
+    </footer>
+    <!-- Footer OFF-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/script2.js"></script>
+</body>
+</html>
